@@ -55,10 +55,6 @@ public class Still extends AppCompatActivity implements OnMapReadyCallback
         }
 
         Long identifier = Calendar.getInstance().getTime().getTime();
-        /*Date d = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss a");
-        String currentDateTimeString = sdf.format(d);
-        Log.d("Time", currentDateTimeString);*/
         UserActivity ua = new UserActivity();
         ua.setActivity("Still");
         ua.setStartTime(identifier.toString());
