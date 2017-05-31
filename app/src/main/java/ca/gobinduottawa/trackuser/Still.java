@@ -116,38 +116,5 @@ public class Still extends AppCompatActivity implements OnMapReadyCallback
         opt.position(new LatLng(latitude[0], longitude[0]));
         googleMap.addMarker(opt);
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude[0], longitude[0]),16));
-
-        /*final LocationListener locationListener = new LocationListener()
-        {
-            public void onLocationChanged(Location location)
-            {
-                LatLng latLong=new LatLng(location.getLatitude(),location.getLongitude());
-                googleMap.clear();
-                //googleMap.addPolyline(mPolylineOptions.add(latLong));
-                //googleMap.addMarker(new MarkerOptions().position(latLong).icon(BitmapDescriptorFactory.fromResource(R.drawable.navigate)));
-                googleMap.addMarker(opt);
-                *//*longitude[0] = location.getLongitude();
-                latitude[0] = location.getLatitude();
-                opt.icon(BitmapDescriptorFactory.fromResource(R.drawable.navigate));
-                opt.position(new LatLng(location.getLatitude(), location.getLongitude()));
-                googleMap.addMarker(opt);*//*
-                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude[0], longitude[0]),16));
-            }
-
-            public void onStatusChanged(String provider, int status, Bundle extras)
-            {
-
-            }
-            public void onProviderDisabled(String provider)
-            {
-
-            }
-            public void onProviderEnabled(String provider)
-            {
-
-            }
-
-        };*/
-        //lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 10, locationListener);
     }
 }
