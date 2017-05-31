@@ -50,10 +50,6 @@ public class Running extends AppCompatActivity implements OnMapReadyCallback
             Toast.makeText(getBaseContext(), "Your last activity ("+lastActivityInfo[1]+") duration: "+ lastActivityInfo[2], Toast.LENGTH_SHORT).show();
         }
         Long identifier = Calendar.getInstance().getTime().getTime();
-        /*Date d=new Date();
-        SimpleDateFormat sdf=new SimpleDateFormat("hh:mm:ss a");
-        String currentDateTimeString = sdf.format(d);
-        Log.d("Time",currentDateTimeString);*/
         UserActivity ua=new UserActivity();
         ua.setActivity("Running");
         ua.setStartTime(identifier.toString());
@@ -146,11 +142,6 @@ public class Running extends AppCompatActivity implements OnMapReadyCallback
                 googleMap.addPolyline(mPolylineOptions.add(latLong));
                 googleMap.addMarker(new MarkerOptions().position(latLong).icon(BitmapDescriptorFactory.fromResource(R.drawable.navigate)));
                 googleMap.addMarker(opt);
-                /*longitude[0] = location.getLongitude();
-                latitude[0] = location.getLatitude();
-                opt.icon(BitmapDescriptorFactory.fromResource(R.drawable.navigate));
-                opt.position(new LatLng(location.getLatitude(), location.getLongitude()));
-                googleMap.addMarker(opt);*/
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude[0], longitude[0]),16));
             }
 
